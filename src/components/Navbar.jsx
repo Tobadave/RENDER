@@ -4,7 +4,7 @@ import { NAV_LINKS } from '../constants'
 
 const Navbar = () => {
   return (
-    <nav className="flex gap-6 p-4 h-25 items-center bg-black text-white text-lg justify-between md:px-20">
+    <nav className="flex gap-6 p-4 h-25 items-center bg-black text-white text-lg justify-between md:px-20 border border-gray-800">
       <div className='flex font-extrabold'>
         NextSimulations
       </div>
@@ -14,7 +14,7 @@ const Navbar = () => {
           <Link
             key={link.path}
             to={link.path}
-            className='relative text-white group transition-colors duration-200 hover:text-blue-500'
+            className='relative text-white group hover:text-blue-500'
           >
             {link.label}
             {/* Underline animation */}
