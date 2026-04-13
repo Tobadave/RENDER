@@ -36,7 +36,9 @@ const Home = () => {
     {/* TOP HERO SECTION */}
     <section className=''>
       <section className='
-        relative flex flex-row items-center py-60 min-h-[50vh] bg-black px-35 overflow-visible
+        relative flex flex-row items-center 
+        py-40 md:py-60 md:min-h-[50vh] bg-black 
+        px-10 md:px-35 overflow-visible
         bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]
         bg-size-[60px_60px]
       '>
@@ -45,36 +47,36 @@ const Home = () => {
         <div className='absolute top-20 left-20 w-30 h-30 bg-blue-600 rounded-full blur-[10px] opacity-10 z-10' />
 
         {/* LEFT SECTION */}
-        <div className='w-1/2 flex flex-col items-start text-left text-white'>
+        <div className='md:w-1/2 flex flex-col items-start text-left text-white'>
 
           {/* Badge */}
-          <span className='text-blue-400 border border-blue-600 rounded-full px-4 py-1 text-[11px] mb-10'>
+          <span className='hidden md:flex justify-center items-center text-blue-400 border border-blue-600 rounded-full md:px-4 py-1 md:text-[12px] md:mb-10'>
           Leading XR | Game Design Studio
           </span>
 
-          <h1 className='text-6xl font-bold mb-3 leading-tight'>{HERO_SECTION.headline}</h1>
-          <p className='text-lg text-gray-400 max-w-xl mb-2'>{HERO_SECTION.subtext}</p>
+          <h1 className='text-center md:text-left text-4xl md:text-6xl font-bold mb-3 leading-tight'>{HERO_SECTION.headline}</h1>
+          <p className='text-center md:text-left text-md md:text-lg text-gray-400 md:max-w-xl mb-2'>{HERO_SECTION.subtext}</p>
 
           {/* Buttons */}
-          <div className='flex gap-4 font-bold mt-12'>
+          <div className='flex mx-auto md:mx-0 flex-col md:flex-row gap-2 md:gap-4 md:font-bold mt-10 md:mt-5 sm:mt-12'>
             <button
               onMouseMove={handleMouseMove}
-              className='btn-track bg-blue-600 text-white md:w-50 px-10 py-6 rounded-sm hover:cursor-pointer hover:bg-blue-800'>
+              className='btn-track bg-blue-600 text-white md:w-50 px-15 md:px-10 py-4 md:py-6 rounded-sm hover:cursor-pointer hover:bg-blue-800'>
               {HERO_SECTION.cta}
             </button>
 
             <button
               onMouseMove={handleMouseMove}
-              className='btn-track border border-white md:w-50 text-white px-10 py-6 rounded-sm hover:cursor-pointer duration-200'>
+              className='btn-track border border-white md:w-50 px-15 md:px-10 py-4 md:py-6 rounded-sm hover:cursor-pointer duration-200'>
               {HERO_SECTION.ctaSecondary}
             </button>
           </div>
 
           {/* Stats */}
-          <div className='flex gap-10 mt-10'>
+          <div className='flex gap-10 mt-40 md:mt-10 mx-auto md:mx-0 justify-center md:text-left'>
             {HERO_STATS.map((stat) => (
               <div key={stat.label}>
-                <span className='text-gray-400 font-bold text-2xl'>{stat.value}</span>
+                <span className='text-gray-400 font-bold text-xl md:text-2xl'>{stat.value}</span>
                 <p className='text-gray-500 text-sm'>{stat.label}</p>
               </div>
             ))}
@@ -82,8 +84,10 @@ const Home = () => {
 
         </div>
 
+
+        {/* SECOND SECTION */}
         {/* RIGHT SECTION */}
-        <div className='w-1/2 flex items-center justify-center overflow-visible'>
+        <div className='w-1/2 hidden md:flex items-center justify-center overflow-visible'>
           <div className='relative h-full w-full rounded-lg overflow-visible'>
 
             {/* Main video */}
@@ -108,12 +112,12 @@ const Home = () => {
 
 
       {/* WHO WE ARE SECTION */}
-      <section className='min-h-[50vh] bg-linear-to-b  from-black to-gray-800 px-35 text-white pb-10'>
+      <section className='min-h-[50vh] bg-linear-to-b  from-black to-gray-800 sm:px-35 text-white pb-10'>
 
         {/* Large Header */}
-        <p className='items-center flex justify-center py-5 text-4xl text-gray-300 font-semibold'>
+        <p className='items-center flex flex-col md:flex-row justify-center py-5 text-xl md:text-4xl text-gray-300 font-semibold'>
           Get to know&nbsp;
-          <motion.div layout className='inline-flex overflow-hidden'>
+          <motion.div layout className='inline-flex overflow-hidden text-3xl md:text-4xl'>
             <AnimatePresence mode='wait'>
               <motion.span
                 key={index}
@@ -130,7 +134,7 @@ const Home = () => {
         </p>
 
         {/* Box container */}
-        <div className='flex flex-row h-[50%] gap-3 p-10'>
+        <div className='flex flex-col md:flex-row h-[50%] gap-3 p-10'>
 
             {/* left section */}
             <div className='flex flex-1/2 flex-col rounded-lg bg-[#141414] text-white border-transparent transition-normal hover:border-blue-500'>
@@ -139,14 +143,14 @@ const Home = () => {
                     <img src={gamecover} alt=""
                       className='w-full h-15 object-cover rounded-t-lg blur-2xl backdrop-blur-xl'
                     />
-                    <p className='absolute bottom-2 left-2 text-gray-200 z-10 text-3xl font-semibold'>Our Story</p>
+                    <p className='absolute bottom-2 left-2 text-gray-200 z-10 md:text-3xl font-semibold'>Our Story</p>
                   </div>
                 </div>
 
                 {/* text */}
                 <div className='flex flex-2/3 flex-col  items-center px-8 pt-0 text-gray-400'>
                   {ABOUT_SECTION.paragraphs.map((p, index) => (
-                    <p key={index} className='mb-4 text-lg'>{p}</p>
+                    <p key={index} className='mb-4 sm:text-lg'>{p}</p>
                   ))}
                 </div>
                 <div className='flex flex-1/4 h-10 px-8 pb-8 right-0'>
