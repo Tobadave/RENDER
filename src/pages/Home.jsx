@@ -133,24 +133,24 @@ const Home = () => {
         <div className='flex flex-row h-[50%] gap-3 p-10'>
 
             {/* left section */}
-            <div className='flex flex-1/2 flex-col rounded-lg bg-[#141414] text-white'>
-                <div className='flex flex-col p-3'>
+            <div className='flex flex-1/2 flex-col rounded-lg bg-[#141414] text-white border-transparent transition-normal hover:border-blue-500'>
+                <div className='flex flex-col p-5 pt-3'>
                   <div className='relative'>
                     <img src={gamecover} alt=""
-                      className='w-full h-20 object-cover rounded-t-lg'
+                      className='w-full h-15 object-cover rounded-t-lg blur-2xl backdrop-blur-xl'
                     />
-                    <p className='absolute bottom-2 left-2 text-gray-200 z-10 text-3xl font-semibold my-4'>Our Story</p>
+                    <p className='absolute bottom-2 left-2 text-gray-200 z-10 text-3xl font-semibold'>Our Story</p>
                   </div>
                 </div>
 
                 {/* text */}
-                <div className='flex flex-2/3 flex-col  items-center px-5 pt-0 text-gray-400'>
+                <div className='flex flex-2/3 flex-col  items-center px-8 pt-0 text-gray-400'>
                   {ABOUT_SECTION.paragraphs.map((p, index) => (
-                    <p key={index} className='mb-4'>{p}</p>
+                    <p key={index} className='mb-4 text-lg'>{p}</p>
                   ))}
                 </div>
-                <div className='flex flex-1/4 h-10 p-5'>
-                  <button className='bg-blue-600 p-3 hover:cursor-pointer hover:bg-blue-700 rounded-md text-sm px-4'>
+                <div className='flex flex-1/4 h-10 px-8 pb-8 right-0'>
+                  <button className='bg-blue-600 font-bold p-3 mt-5 text-md hover:cursor-pointer hover:bg-blue-700 rounded-md px-6'>
                     Read More...
                   </button>
                 </div>
@@ -158,11 +158,31 @@ const Home = () => {
 
             {/* right section */}
             <div className='flex flex-1/2 flex-col gap-2'>
-                <div className='flex flex-1/2 rounded-lg  bg-[#141414]'>
+
+                {/* TOP-BOX */}
+                <div className='flex flex-1/2 flex-col rounded-lg  bg-[#141414]'>
+                  <div className='flex flex-col p-5 pt-3'>
+                    <div className='relative'>
+                      <img src={gamecover} alt=""
+                        className='w-full h-14 object-cover rounded-t-lg blur-2xl backdrop-blur-xl'
+                      />
+                      <p className='absolute bottom-2 left-2 text-gray-200 z-10 text-2xl font-semibold'>Our Mission</p>
+                    </div>
+                  </div>
 
                 </div>
-                <div className='flex flex-1/2 rounded-lg  bg-[#141414]'>
 
+
+                {/* BOTTOM BOX */}
+                <div className='flex flex-1/2 flex-col rounded-lg  bg-[#141414]'>
+                  <div className='flex flex-col p-5 pt-3'>
+                    <div className='relative'>
+                      <img src={gamecover} alt=""
+                        className='w-full h-14 object-cover rounded-t-lg blur-2xl backdrop-blur-xl'
+                      />
+                      <p className='absolute bottom-2 left-2 text-gray-200 z-10 text-2xl font-semibold'>Aim & Objectives</p>
+                    </div>
+                  </div>
                 </div>
 
             </div>
@@ -170,7 +190,20 @@ const Home = () => {
       </section>
 
       <section className='min-h-[40vh] bg-gray-800 px-35 text-white py-5'>
-
+        <div className='relative'>
+          <video autoPlay loop muted className='absolute inset-0 w-full h-full object-cover' />
+          <h1 style={{
+            backgroundImage: 'url(video-poster.jpg)', // use canvas trick for live video
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            fontSize: '27px',
+            fontStyle: 'bold',
+            fontWeight: '20px',
+          }}>
+            NextSimulations
+          </h1>
+        </div>
       </section>
 
     </section>

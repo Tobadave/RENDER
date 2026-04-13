@@ -4,9 +4,9 @@ import { NAV_LINKS } from '../constants'
 
 const Navbar = () => {
   return (
-    <nav className="flex gap-6 p-4 h-25 items-center bg-black text-white text-lg justify-between md:px-20 border border-gray-800">
-      <div className='flex font-extrabold'>
-        NextSimulations
+    <nav className="flex gap-6 p-4 h-25 items-center bg-black text-white text-md justify-between md:px-20 border border-gray-800">
+      <div className='flex font-extrabold text-2xl italic uppercase text-blue-100'>
+        orion Studios
       </div>
 
       <div className='gap-5 md:gap-9 font-semibold hidden md:flex'>

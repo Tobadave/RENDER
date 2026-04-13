@@ -48,3 +48,13 @@ body {
 .animate-fadein {
   animation: fadein 0.5s ease forwards;
 }
+
+.video-text {
+  font-size: 80px;
+  font-weight: 900;
+  background: url('your-video') center/cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
