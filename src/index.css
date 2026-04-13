@@ -52,9 +52,15 @@ body {
 .video-text {
   font-size: 80px;
   font-weight: 900;
-  background: url('your-video') center/cover;
+  background: url('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4') center/cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+@keyframes gradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 

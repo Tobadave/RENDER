@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 import CountUp from 'react-countup'
 // ABOUT_SECTION
-
+// how are yoou
 
 const handleMouseMove = (e) => {
   const rect = e.currentTarget.getBoundingClientRect()
@@ -189,21 +189,20 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='min-h-[40vh] bg-gray-800 px-35 text-white py-5'>
-        <div className='relative'>
-          <video autoPlay loop muted className='absolute inset-0 w-full h-full object-cover' />
-          <h1 style={{
-            backgroundImage: 'url(video-poster.jpg)', // use canvas trick for live video
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            fontSize: '27px',
-            fontStyle: 'bold',
-            fontWeight: '20px',
-          }}>
-            NextSimulations
-          </h1>
-        </div>
+    <section className='min-h-[50vh] bg-gray-800 px-35 text-white py-5 flex flex-col gap-12 items-center justify-center'>
+                  
+    </section>
+  
+    {/* MAIN CALL TO ACTION -> BUILD BEYOND */}
+        {/* This is hidden for now */}
+      <section className='hidden min-h-[50vh] bg-gray-800 px-35 text-white py-5 flex flex-col gap-12 items-center justify-center'>
+        <h1 className='text-7xl font-medium bg-linear-to-r from-blue-500 via-purple-700 to-blue-800 bg-clip-text text-transparent bg-size-[200%] animate-[gradient_3s_ease_infinite]'>
+          Ready to Build beyond reality?
+        </h1>
+        <button 
+          className='bg-blue-600 px-10 py-5 mt-2 rounded-lg hover:cursor-pointer font-bold hover:bg-blue-800 transition-all duration-200'>
+            Start your project
+          </button>
       </section>
 
     </section>
