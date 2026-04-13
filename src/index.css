@@ -15,6 +15,7 @@ body {
 
 .animate-glow {
   animation: pulse-glow 8s ease-in-out infinite;
+    will-change: transform, opacity;
 }
 
 .btn-track {
