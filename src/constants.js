@@ -59,3 +59,12 @@ export const FOOTER = {
     },
   ],
 }
+
+export const ABOUT_SECTION = {
+  paragraphs: [
+    "Our journey began as classmates from different backgrounds and ethnic groups, each with our own unique cultures, traditions, and stories. Despite our differences, we shared a common passion for games and a curiosity about how stories shape identity.",
+    "We realized that while African cultures are rich with history, folklore, and life lessons, many of these stories are not well represented in the gaming world. This sparked a simple but powerful idea: what if we could bring our diverse African stories together and tell them through games that both children and adults would love?",
+    "By combining our perspectives, we began exploring ways to transform traditional stories, everyday experiences, and cultural values into interactive and engaging gameplay. What started as conversations between classmates has grown into a shared vision to build a game studio that celebrates Africa's diversity, educates through play, and connects people across cultures.",
+    "Today, we are driven by the belief that our differences are our strength, and through our games, we aim to create experiences that are not only entertaining, but meaningful and lasting.",
+  ],
+}
