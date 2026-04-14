@@ -9,12 +9,13 @@ const Navbar = () => {
         orion Studios
       </div>
 
-      <div className='gap-5 md:gap-9 font-semibold hidden md:flex'>
+      <div className='gap-5 md:gap-9 font-semibold text-[15px] hidden md:flex 
+        xl:border-2 border-gray-700 py-3 lg:px-7 rounded-full'>
         {NAV_LINKS.map((link) => (
           <Link
             key={link.path}
             to={link.path}
-            className='relative text-white group hover:text-blue-500'
+            className='relative text-gray-200 group hover:text-blue-500'
           >
             {link.label}
             {/* Underline animation */}
