@@ -27,7 +27,7 @@ const Home = () => {
       {/* ── HERO ── */}
       <section className='
         relative flex flex-row items-center
-        py-40 md:py-60 md:min-h-[50vh] bg-black
+        py-40 md:py-50 md:min-h-[50vh] bg-black
         px-10 md:px-35 overflow-hidden
       '>
         {/* Grid background */}
@@ -55,11 +55,11 @@ const Home = () => {
 
           <div className='flex mx-auto md:mx-0 flex-col md:flex-row gap-2 md:gap-4 md:font-bold mt-10 md:mt-5'>
             <button onMouseMove={handleMouseMove}
-              className='btn-track bg-blue-600 text-white md:w-50 px-15 md:px-10 py-4 md:py-6 rounded-sm hover:cursor-pointer hover:bg-blue-800'>
+              className='btn-track bg-blue-600 text-white md:w-55 px-15 md:px-10 py-4 md:py-6 rounded-full hover:cursor-pointer hover:bg-blue-800'>
               {HERO_SECTION.cta}
             </button>
             <button onMouseMove={handleMouseMove}
-              className='btn-track border border-white md:w-50 px-15 md:px-10 py-4 md:py-6 rounded-sm hover:cursor-pointer'>
+              className='btn-track border border-white/70 text-white/70 md:w-55 px-15 md:px-10 py-4 md:py-6 rounded-full hover:cursor-pointer'>
               {HERO_SECTION.ctaSecondary}
             </button>
           </div>
@@ -82,8 +82,9 @@ const Home = () => {
               className='w-full h-full object-cover rounded-lg relative z-10'>
               <source src={heroVideo} type='video/mp4' />
             </video>
-            {/* Static glow only — no duplicate video */}
-            <div className='pointer-events-none absolute inset-0 bg-blue-500 blur-3xl opacity-70 -z-10 rounded-lg' />
+
+            {/* Glow underneath — offset downward to peek out */}
+            <div className='pointer-events-none absolute top-6 left-6 right-0 bottom-0 w-full h-full bg-blue-500 blur-[50px] opacity-30 z-0 rounded-lg scale-90' />
           </div>
         </div>
       </section>

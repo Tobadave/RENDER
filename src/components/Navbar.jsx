@@ -10,12 +10,12 @@ const Navbar = () => {
       </div>
 
       <div className='gap-5 md:gap-9 font-semibold text-[15px] hidden md:flex 
-        xl:border-2 border-gray-700 py-3 lg:px-7 rounded-full'>
+        xl:border-2 border-gray-800 py-3 lg:px-7 rounded-full'>
         {NAV_LINKS.map((link) => (
           <Link
             key={link.path}
             to={link.path}
-            className='relative text-gray-200 group hover:text-blue-500'
+            className='relative text-gray-400 group hover:text-blue-500'
           >
             {link.label}
             {/* Underline animation */}
