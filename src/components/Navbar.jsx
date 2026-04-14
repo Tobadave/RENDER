@@ -4,7 +4,8 @@ import { NAV_LINKS } from '../constants'
 
 const Navbar = () => {
   return (
-    <nav className="flex gap-6 p-4 md:h-25 items-center bg-black text-white text-md justify-between md:px-20 md:border md:border-gray-800">
+    <nav className="flex gap-6 p-4 md:h-25 z-10 items-center bg-transparenttext-white text-md justify-between md:px-20 md:border md:border-gray-800">
+      {/* <nav className='bg-black w-full top-0 z-0 relative' /> */}
       <div className='flex md:font-extrabold text-sm md:text-2xl italic uppercase text-blue-100'>
         orion Studios
       </div>

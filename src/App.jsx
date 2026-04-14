@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
       </Routes>
 
-      {/* <Footer />         Always visible */}
+      <Footer />  
     </BrowserRouter>
   )
 }

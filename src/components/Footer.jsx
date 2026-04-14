@@ -3,7 +3,7 @@ import { FOOTER } from '../constants'
 
 const Footer = () => {
   return (
-    <footer className='bg-black text-white px-40 py-20 flex flex-col gap-10 border-gray-700 border-2'>
+    <footer className='bottom-0 bg-black text-white px-40 py-20 flex flex-col gap-10 border-gray-700'>
 
       {/* Top — Link Columns */}
       {/* <section className='flex flex-row'> */}

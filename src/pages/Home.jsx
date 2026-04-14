@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ABOUT_SECTION, HERO_SECTION, HERO_STATS } from '../constants'
 import heroVideo from '../media/testvideo.mp4'
 import gamecover from '../media/game-cover.jpg'
+import blend from '../media/blend.jpg'
 
 const phrases = ['our story', 'our drive', 'our vision', 'our culture']
 
@@ -18,7 +19,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % phrases.length)
-    }, 2000)
+    }, 4000)
     return () => clearInterval(interval)
   }, [])
 
@@ -92,23 +93,19 @@ const Home = () => {
       {/* ── WHO WE ARE ── */}
       <section className='min-h-[50vh] bg-linear-to-b from-black to-gray-800 px-10 md:px-35 text-white pb-10'>
 
-        <p className='flex flex-col md:flex-row items-center justify-center py-5 text-xl md:text-4xl text-gray-300 font-semibold'>
-          Get to know&nbsp;
-          <motion.div layout className='inline-flex overflow-hidden text-3xl md:text-4xl'>
-            <AnimatePresence mode='wait'>
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.4 }}
-                className='text-blue-500 italic whitespace-nowrap'
-              >
-                {phrases[index]}
-              </motion.span>
-            </AnimatePresence>
-          </motion.div>
-        </p>
+        <AnimatePresence mode='wait'>
+          <motion.p
+            key={index}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.6 }}
+            className='flex justify-center py-8 text-xl md:text-4xl text-gray-300 font-semibold'
+          >
+            Get to know&nbsp;
+            <span className='text-blue-500 italic'>{phrases[index]}</span>
+          </motion.p>
+        </AnimatePresence>
 
         <div className='flex flex-col md:flex-row gap-3 p-10'>
 
@@ -158,15 +155,39 @@ const Home = () => {
       </section>
 
       {/* ── EMPTY SECTION ── */}
-      <section className='min-h-[50vh] bg-gray-800 px-35 text-white py-5 flex flex-col gap-12 items-center justify-center' />
+      <section className='min-h-[50vh] bg-gray-800 px-35 text-white py-5 flex flex-col gap-2 items-center justify-center'>
+        <span className='flex flex-1/4 flex-col md:flex-row justify-center w-full px-10 py-15'>
+            <p className='md:text-6xl md:font-bold'>
+              Build experiences like never before</p>
+        </span>
+        <span className='flex flex-3/4 flex-col md:flex-row w-full h-full p-10 gap-25'>
+
+          {/* LEFT SECTION */}
+          <div className='flex flex-1/2'>
+              <img src={blend} alt="" className='
+              w-full rounded-xl shadow-2xl opacity-80 hover:opacity-100' />
+          </div>
+
+          {/* RIGHT SECTION */}
+          <div className='flex flex-1/2 flex-col'>
+              <p className='flex flex-1/4 text-blue-600 text-4xl font-bold'>
+                  Advanced AI Modelled Targetting
+              </p>
+              <div className='flex flex-3/4 text-[20px] pb-15'>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est eveniet inventore neque repellat, similique commodi fugit nulla corrupti delectus cum minima itaque distinctio illo sed blanditiis aspernatur, aliquam perspiciatis dolores exercitationem ipsam non? Maiores accusantium itaque, esse facere est hic et libero, neque praesentium molestias voluptates. Sapiente voluptatem commodi iure fuga alias numquam unde voluptatum.
+              </div>
+          </div>
+          
+        </span>
+      </section>
 
       {/* ── CTA — hidden ── */}
-      <section className='hidden min-h-[50vh] bg-gray-800 px-35 text-white py-5 flex flex-col gap-12 items-center justify-center'>
-        <h1 className='text-7xl font-medium bg-gradient-to-r from-blue-500 via-purple-700 to-blue-800 bg-clip-text text-transparent bg-[length:200%] animate-[gradient_3s_ease_infinite]'>
+      <section className=' min-h-[50vh] bg-linear-to-b from-gray-800 to-black px-35 text-white pt-5 flex flex-col gap-12 items-center justify-center'>
+        <h1 className=' md:text-5xl font-medium bg-linear-to-r from-blue-500 via-purple-700 to-blue-800 bg-clip-text mt-20 text-transparent bg-size-[200%] animate-[gradient_3s_ease_infinite]'>
           Ready to Build beyond reality?
         </h1>
-        <button className='bg-blue-600 px-10 py-5 mt-2 rounded-lg hover:cursor-pointer font-bold hover:bg-blue-800 transition-all duration-200'>
-          Start your project
+        <button className='bg-blue-600 px-8 py-4 mt-0 rounded-lg hover:cursor-pointer text-sm font-bold hover:bg-blue-800 transition-all duration-200'>
+          Start your project here
         </button>
       </section>
     </>
