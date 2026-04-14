@@ -1,8 +1,8 @@
 // constants.js
 export const NAV_LINKS = [
-  { label: '  Our Games', path: '/games' },
-  { label: 'About Us', path: '/about' },
+  { label: 'Our games', path: '/games' },
   { label: 'Join Us', path: '/join' },
+  { label: 'About Us', path: '/about' },
   // { label: 'Latest News', path: '/news' },
   { label: 'Contact Us', path: '/contact' },
 ]

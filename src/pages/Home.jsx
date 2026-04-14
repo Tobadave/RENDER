@@ -4,6 +4,7 @@ import { ABOUT_SECTION, HERO_SECTION, HERO_STATS } from '../constants'
 import heroVideo from '../media/testvideo.mp4'
 import gamecover from '../media/game-cover.jpg'
 import blend from '../media/blend.jpg'
+import { BsArrowUpRightCircleFill } from "react-icons/bs";
 
 const phrases = ['our story', 'our drive', 'our vision', 'our culture']
 
@@ -28,7 +29,7 @@ const Home = () => {
       {/* ── HERO ── */}
       <section className='
         relative flex flex-row items-center
-        py-40 md:py-50 md:min-h-[50vh] bg-black
+        py-40 md:py-75 md:min-h-[50vh] bg-black
         px-10 md:px-35 overflow-hidden
       '>
         {/* Grid background */}
@@ -54,17 +55,19 @@ const Home = () => {
             {HERO_SECTION.subtext}
           </p>
 
+        {/* BUTTONS */}
           <div className='flex mx-auto md:mx-0 flex-col md:flex-row gap-2 md:gap-4 md:font-bold mt-10 md:mt-5'>
             <button onMouseMove={handleMouseMove}
               className='btn-track bg-blue-600 text-white md:w-55 px-15 md:px-10 py-4 md:py-6 rounded-full hover:cursor-pointer hover:bg-blue-800'>
               {HERO_SECTION.cta}
             </button>
             <button onMouseMove={handleMouseMove}
-              className='btn-track border border-white/70 text-white/70 md:w-55 px-15 md:px-10 py-4 md:py-6 rounded-full hover:cursor-pointer'>
+              className='btn-track border border-white/40 text-white/70 md:w-55 px-15 md:px-10 py-4 md:py-6 rounded-full hover:cursor-pointer'>
               {HERO_SECTION.ctaSecondary}
             </button>
           </div>
 
+        {/* LIVE NUMBER STATS */}
           <div className='flex gap-10 mt-40 md:mt-10 mx-auto md:mx-0 justify-center md:text-left'>
             {HERO_STATS.map((stat) => (
               <div key={stat.label}>
@@ -125,8 +128,8 @@ const Home = () => {
               ))}
             </div>
             <div className='px-8 pb-8'>
-              <button className='bg-blue-600 font-bold p-3 mt-5 hover:cursor-pointer hover:bg-blue-700 rounded-md px-6'>
-                Read More...
+              <button className='items-center flex gap-2 flex-row bg-blue-600 font-semibold p-3 px-5 mt-5 text-sm hover:cursor-pointer hover:bg-blue-700 rounded-full'>
+                Read More <BsArrowUpRightCircleFill size={20} color='white' />
               </button>
             </div>
           </div>
