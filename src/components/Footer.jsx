@@ -3,7 +3,7 @@ import { FOOTER } from '../constants'
 
 const Footer = () => {
   return (
-    <footer className='bottom-0 bg-black text-white px-40 py-20 flex flex-col gap-10 border-gray-700'>
+    <footer className='bottom-0 bg-black text-white px-10 md:px-40 py-10 md:py-20 flex flex-col gap-10 border-gray-700'>
 
       {/* Top — Link Columns */}
       {/* <section className='flex flex-row'> */}
@@ -42,15 +42,15 @@ const Footer = () => {
       </section> */}
 
       {/* Bottom — Copyright + Email */}
-      <div className='flex flex-row justify-between md:h-20 items-start'>
+      <div className='flex flex-col md:flex-row justify-between md:h-20 items-start'>
 
         {/* Email signup */}
-        <div className='flex items-center gap-3'>
+        <div className='w-full md:w-fit flex flex-col md:flex-row md:items-center gap-3'>
           <p className='text-gray-400 text-sm'>Stay in the loop</p>
           <input
             type='email'
             placeholder='Email'
-            className='bg-gray-900 border border-gray-700 text-white text-sm px-4 py-2 rounded-sm outline-none focus:border-blue-500 transition duration-200'
+            className='bg-gray-900 border border-gray-700 text-white text-sm px-4 py-3 rounded-sm outline-none focus:border-blue-500 transition duration-200'
           />
           <button className='bg-blue-600 text-white px-4 py-2 text-sm rounded-sm hover:bg-blue-800 transition duration-200'>
             →
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <p className='text-gray-500 text-sm'>{FOOTER.copyright}</p>
+        <p className='py-2 text-gray-500 text-sm'>{FOOTER.copyright}</p>
 
       </div>
 

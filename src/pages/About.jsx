@@ -1,5 +1,5 @@
 import React from 'react'
-import bg from "../media/blend.jpg"
+import bg from "../media/about-us2.jpg"
 
 const About = () => {
   return (

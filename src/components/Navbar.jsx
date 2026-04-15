@@ -33,7 +33,7 @@ const Navbar = () => {
             {location.pathname === link.path && (
               <motion.div
                 layoutId='pill'
-                className='absolute inset-0 bg-blue-800 rounded-full -z-10'
+                className='absolute inset-0 bg-blue-700/40 rounded-full -z-10'
                 transition={{ type: 'spring', stiffness: 400, damping: 30 }}
               />
             )}

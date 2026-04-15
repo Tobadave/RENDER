@@ -44,7 +44,7 @@ const Home = () => {
         {/* LEFT */}
         <div className='md:w-1/2 flex flex-col items-start text-left text-white'>
 
-          <span className='hidden md:flex items-center text-blue-400 border border-blue-600 rounded-full px-4 py-1 text-[12px] mb-10'>
+          <span className='hidden md:flex items-center text-blue-400/60 border border-blue-600/30 rounded-full px-4 py-1 text-[12px] mb-10'>
             Leading XR | Game Design Studio
           </span>
 
