@@ -18,8 +18,8 @@ const Navbar = () => {
       ${scrolled ? 'bg-black/40 backdrop-blur-md border-b border-white/10' : 'bg-transparent'}
     `}>
 
-      <div className='flex md:font-extrabold text-sm md:text-2xl italic uppercase text-blue-100'>
-        orion Studios
+      <div className='flex font-bold md:font-extrabold text-md md:text-2xl italic uppercase px-2 py-1 md:p-0 text-blue-100'>
+        orion <p className='hidden md:flex'> Studios</p>
       </div>
 
       <div className='gap-5 md:gap-2 text-[15px] hidden md:flex

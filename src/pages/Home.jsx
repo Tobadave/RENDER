@@ -28,8 +28,8 @@ const Home = () => {
     <>
       {/* ── HERO ── */}
       <section className='
-        relative flex flex-row items-center
-        py-40 md:py-75 md:min-h-[50vh] bg-black
+        relative flex flex-row items-center pb-25 md:pb-0
+        pt-60 md:py-75 md:min-h-[50vh] bg-black
         px-10 md:px-35 overflow-hidden
       '>
         {/* Grid background */}
@@ -70,9 +70,9 @@ const Home = () => {
         {/* LIVE NUMBER STATS */}
           <div className='flex gap-10 mt-40 md:mt-10 mx-auto md:mx-0 justify-center md:text-left'>
             {HERO_STATS.map((stat) => (
-              <div key={stat.label}>
-                <span className='text-gray-400 font-bold text-xl md:text-2xl'>{stat.value}</span>
-                <p className='text-gray-500 text-sm'>{stat.label}</p>
+              <div key={stat.label} className='w-20 md:w-fit'>
+                <span className='text-gray-400 font-bold  text-lg flex md:flex-none justify-center md:items-* md:text-2xl'>{stat.value}</span>
+                <p className='text-gray-500 text-[12px] md:text-sm md:text-left text-center'>{stat.label}</p>
               </div>
             ))}
           </div>
@@ -103,21 +103,21 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.6 }}
-            className='flex justify-center py-8 text-xl md:text-4xl text-gray-300 font-semibold'
+            className='flex justify-center py-8 text-2xl md:text-4xl text-gray-300 font-semibold'
           >
             Get to know&nbsp;
             <span className='text-blue-500 italic'>{phrases[index]}</span>
           </motion.p>
         </AnimatePresence>
 
-        <div className='flex flex-col md:flex-row gap-3 p-10'>
+        <div className='flex flex-col md:flex-row gap-3 md:p-10'>
 
           {/* Left box */}
           <div className='flex flex-1 flex-col rounded-lg bg-[#141414] text-white'>
-            <div className='p-5 pt-3'>
+            <div className='md:p-5 md:pt-3 px-5'>
               <div className='relative'>
                 <img src={gamecover} alt=""
-                  className='w-full h-15 object-cover rounded-t-lg blur-2xl'
+                  className='w-full md: h-15 object-cover rounded-t-lg blur-2xl'
                 />
                 <p className='absolute bottom-2 left-2 text-gray-200 z-10 md:text-3xl font-semibold'>Our Story</p>
               </div>
@@ -158,25 +158,26 @@ const Home = () => {
       </section>
 
       {/* ── EMPTY SECTION ── */}
-      <section className='min-h-[50vh] bg-gray-800 px-35 text-white py-5 flex flex-col gap-2 items-center justify-center'>
+      <section className='min-h-[50vh] bg-gray-800 px-10 md:px-35 text-white py-5 flex flex-col gap-2 items-center justify-center'>
         <span className='flex flex-1/4 flex-col md:flex-row justify-center w-full px-10 py-15'>
             <p className='md:text-6xl md:font-bold'>
               Build experiences like never before</p>
         </span>
-        <span className='flex flex-3/4 flex-col md:flex-row w-full h-full p-10 gap-25'>
+
+        <span className='flex flex-3/4 flex-col md:flex-row w-full h-full p-0 md:p-10 gap-25'>
 
           {/* LEFT SECTION */}
           <div className='flex flex-1/2'>
               <img src={blend} alt="" className='
-              w-full rounded-xl shadow-2xl opacity-80 hover:opacity-100' />
+              w-full rounded-xl shadow-2xl opacity-80 hover:opacity-100 items-center' />
           </div>
 
           {/* RIGHT SECTION */}
           <div className='flex flex-1/2 flex-col'>
-              <p className='flex flex-1/4 text-blue-600 text-4xl font-bold'>
+              <p className='flex flex-1/4 text-blue-600 text-2xl md:text-4xl font-bold pb-8'>
                   Advanced AI Modelled Targetting
               </p>
-              <div className='flex flex-3/4 text-[20px] pb-15'>
+              <div className='flex flex-3/4 text-[15px] md:text-[20px] pb-15'>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est eveniet inventore neque repellat, similique commodi fugit nulla corrupti delectus cum minima itaque distinctio illo sed blanditiis aspernatur, aliquam perspiciatis dolores exercitationem ipsam non? Maiores accusantium itaque, esse facere est hic et libero, neque praesentium molestias voluptates. Sapiente voluptatem commodi iure fuga alias numquam unde voluptatum.
               </div>
           </div>

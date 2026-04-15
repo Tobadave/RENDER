@@ -32,7 +32,7 @@ const Contact = () => {
 
                         </textarea>
                     </div>
-                    <button className='mt-4 uppercase text-sm md:font-bold w-full md:mx-auto px-8 py-4 bg-gray-300
+                    <button className='mt-4 uppercase text-sm md:font-bold w-full md:w-fit px-8 py-4 bg-gray-300
                      text-black hover:text-white hover:cursor-pointer hover:bg-blue-700/70 rounded-xl'>
                         send message
                     </button>
