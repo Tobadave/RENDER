@@ -9,16 +9,16 @@ const Footer = () => {
       {/* <section className='flex flex-row'> */}
 
 
-        <div className='flex gap-2 flex-row justify-between border-b border-gray-800 pb-15 '>
+        <div className='flex gap-2 flex-row justify-between md:justify-normal border-b border-gray-800 pb-15 '>
 
 
         
           {/* links */}
-          <div className='flex flex-2/3 gap-15'>
+          <div className='flex flex-2/3 gap-10 justify-evenly  md:justify-normal md:gap-20'>
           {FOOTER.columns.map((col) => (
 
-            <div key={col.label} className='flex flex-col justify-evenly'>
-              <p className='font-bold text-white text-sm mb-1 w-fit'>{col.label}</p>
+            <div key={col.label} className='flex flex-col justify-start md:justify-normal gap-2'>
+              <p className='font-bold text-white text-sm mb-1 w-fit items-start md:text-md'>{col.label}</p>
 
               {col.links.map((link) => (
                 <a key={link.label} href={link.href}
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
 
           {/* right side */}
-          <div className='flex flex-1/3'>
+          <div className='hidden md:flex flex-1/3'>
 
           </div>
         </div>

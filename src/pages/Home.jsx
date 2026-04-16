@@ -159,25 +159,27 @@ const Home = () => {
 
       {/* ── EMPTY SECTION ── */}
       <section className='min-h-[50vh] bg-gray-800 px-10 md:px-35 text-white py-5 flex flex-col gap-2 items-center justify-center'>
-        <span className='flex flex-1/4 flex-col md:flex-row justify-center w-full px-10 py-15'>
-            <p className='md:text-6xl md:font-bold'>
-              Build experiences like never before</p>
+        <span className='text-xl md:text-6xl font-semibold md:font-bold text-center flex-1/4 flex-col md:flex-row 
+          justify-center w-full md:px-10 py-10 md:py-15'>
+            {/* <p className='md:text-6xl md:font-bold'> */}
+              Build experiences like never before
+              {/* </p> */}
         </span>
 
         <span className='flex flex-3/4 flex-col md:flex-row w-full h-full p-0 md:p-10 gap-25'>
 
           {/* LEFT SECTION */}
-          <div className='flex flex-1/2'>
+          <div className='flex md:flex-1/2 h-auto md:h-fit'>
               <img src={blend} alt="" className='
               w-full rounded-xl shadow-2xl opacity-80 hover:opacity-100 items-center' />
           </div>
 
           {/* RIGHT SECTION */}
           <div className='flex flex-1/2 flex-col'>
-              <p className='flex flex-1/4 text-blue-600 text-2xl md:text-4xl font-bold pb-8'>
+              <p className='flex flex-1/4 text-xl md:text-4xl font-bold pb-8'>
                   Advanced AI Modelled Targetting
               </p>
-              <div className='flex flex-3/4 text-[15px] md:text-[20px] pb-15'>
+              <div className='flex flex-3/4 text-white/70 text-[15px] md:text-[20px] pb-15'>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est eveniet inventore neque repellat, similique commodi fugit nulla corrupti delectus cum minima itaque distinctio illo sed blanditiis aspernatur, aliquam perspiciatis dolores exercitationem ipsam non? Maiores accusantium itaque, esse facere est hic et libero, neque praesentium molestias voluptates. Sapiente voluptatem commodi iure fuga alias numquam unde voluptatum.
               </div>
           </div>
@@ -186,11 +188,14 @@ const Home = () => {
       </section>
 
       {/* ── CTA — hidden ── */}
-      <section className=' min-h-[50vh] bg-linear-to-b from-gray-800 to-black px-35 text-white pt-5 flex flex-col gap-12 items-center justify-center'>
-        <h1 className=' md:text-5xl font-medium bg-linear-to-r from-blue-500 via-purple-700 to-blue-800 bg-clip-text mt-20 text-transparent bg-size-[200%] animate-[gradient_3s_ease_infinite]'>
+      <section className='min-h-[30vh] md:min-h-[50vh] bg-linear-to-b from-gray-800 to-black px-15 sm:px-35 text-white pt-5 flex flex-col gap-5 md:gap-12 items-center justify-center'>
+        <h1 className='text-xl md:text-5xl font-bold md:font-medium
+          bg-linear-to-r from-blue-500 via-purple-700 to-blue-800 
+          bg-clip-text md:mt-20 text-transparent bg-size-[200%] animate-[gradient_3s_ease_infinite]'>
           Ready to Build beyond reality?
         </h1>
-        <button className='bg-blue-600 px-8 py-4 mt-0 rounded-lg hover:cursor-pointer text-sm font-bold hover:bg-blue-800 transition-all duration-200'>
+        <button className='bg-blue-600 px-5 md:px-8 py-3 md:py-4 mt-0 rounded-lg hover:cursor-pointer text-sm md:font-bold
+          hover:bg-blue-800 transition-all duration-200'>
           Start your project here
         </button>
       </section>

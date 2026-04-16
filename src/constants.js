@@ -49,14 +49,6 @@ export const FOOTER = {
         { label: "Github", href: "#" },
       ],
     },
-    {
-      label: "Connect",
-      links: [
-        { label: "Twitter", href: "#" },
-        { label: "LinkedIn", href: "#" },
-        { label: "Instagram", href: "#" },
-      ],
-    },
   ],
 }
 
