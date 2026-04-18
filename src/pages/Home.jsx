@@ -28,8 +28,8 @@ const Home = () => {
     <>
       {/* ── HERO ── */}
       <section className='
-        relative flex flex-row items-center pb-25 md:pb-0
-        pt-60 md:py-75 md:min-h-[50vh] bg-black
+        relative flex flex-row items-center pb-25
+        pt-60 md:pb-50 md:pt-90 md:min-h-[90vh] bg-black
         px-10 md:px-35 overflow-hidden
       '>
         {/* Grid background */}
@@ -112,61 +112,81 @@ const Home = () => {
 
         <div className='flex flex-col md:flex-row gap-3 md:p-10'>
 
+
           {/* Left box */}
           <div className='flex flex-1 flex-col rounded-lg bg-[#141414] text-white'>
-            <div className='md:p-5 md:pt-3 px-5'>
+            {/* OUR STORY HEADER */}
+            <div className='pt-3 md:py-5 md:pt-3 px-6'>
               <div className='relative'>
                 <img src={gamecover} alt=""
-                  className='w-full md: h-15 object-cover rounded-t-lg blur-2xl'
+                  className='w-full h-15 object-cover rounded-t-lg blur-2xl'
                 />
+
+                {/* OUR STORY */}
                 <p className='absolute bottom-2 left-2 text-gray-200 z-10 md:text-3xl font-semibold'>Our Story</p>
               </div>
             </div>
-            <div className='flex flex-col px-8 text-gray-400'>
-              {ABOUT_SECTION.paragraphs.map((p, i) => (
-                <p key={i} className='mb-4 sm:text-lg'>{p}</p>
-              ))}
-            </div>
-            <div className='px-8 pb-8'>
-              <button className='items-center flex gap-2 flex-row bg-blue-600 font-semibold p-3 px-5 mt-5 text-sm hover:cursor-pointer hover:bg-blue-700 rounded-full'>
-                Read More <BsArrowUpRightCircleFill size={20} color='white' />
-              </button>
-            </div>
+
+              <div className='flex flex-col px-8 text-gray-400'>
+                {ABOUT_SECTION.paragraphs.map((p, i) => (
+                  <p key={i} className={`mb-4 sm:text-lg ${i > 0 ? 'hidden md:block' : ''}`}>
+                    {p}
+                  </p>
+                ))}
+              </div>
+              <div className='px-8 pb-8'>
+                <button className='items-center flex gap-1 md:gap-2 flex-row bg-blue-600 font-semibold 
+                  p-3 px-4 md:px-5 md:mt-5 text-sm hover:cursor-pointer hover:bg-blue-700 rounded-full'>
+                    
+                  Read More <BsArrowUpRightCircleFill size={20} color='white' />
+                </button>
+              </div>
           </div>
+
+
 
           {/* Right boxes */}
           <div className='flex flex-1 flex-col gap-2'>
-            <div className='flex flex-1 flex-col rounded-lg bg-[#141414]'>
-              <div className='p-5 pt-3'>
-                <div className='relative'>
-                  <img src={gamecover} alt=""
-                    className='w-full h-14 object-cover rounded-t-lg blur-2xl'
-                  />
-                  <p className='absolute bottom-2 left-2 text-gray-200 z-10 text-2xl font-semibold'>Our Mission</p>
+            {/* BOX ONE */}
+              <div className='flex flex-1 flex-col rounded-lg bg-[#141414]'>
+
+                <div className='px-9 md:px-5 pt-3 pb-5'>
+                  <div className='relative'>
+                    <img src={gamecover} alt=""
+                      className='w-full h-14 object-cover rounded-t-lg blur-2xl'
+                    />
+
+                    {/* OUR MISSION */}
+                    <p className='absolute bottom-2 left-2 text-gray-200 z-10 items-start md:text-2xl font-semibold'>Our Mission</p>
+                  </div>
+                  <p className='flex flex-col px-2 md:px-3 pb-7 md:py-5 text-gray-400
+                    md:text-xl '>
+                    {ABOUT_SECTION.mission}
+                  </p>
                 </div>
               </div>
-            </div>
 
-            <div className='flex flex-1 flex-col rounded-lg bg-[#141414]'>
-              <div className='p-5 pt-3'>
-                  <p className=' text-gray-200 z-10 text-2xl font-semibold'>Aim & Objectives</p>
+              {/* BOX TWO */}
+              <div className='hidden md:flex flex-1 flex-col rounded-lg bg-[#141414]'>
+                <div className='p-5 pt-3'>
+                    <p className=' text-gray-200 z-10 text-2xl font-semibold'>Aim & Objectives</p>
+                </div>
               </div>
-            </div>
           </div>
 
         </div>
       </section>
 
       {/* ── EMPTY SECTION ── */}
-      <section className='min-h-[50vh] bg-gray-800 px-10 md:px-35 text-white py-5 flex flex-col gap-2 items-center justify-center'>
-        <span className='text-xl md:text-6xl font-semibold md:font-bold text-center flex-1/4 flex-col md:flex-row 
-          justify-center w-full md:px-10 py-10 md:py-15'>
+      <section className='min-h-[50vh] bg-gray-800 px-10 md:px-35 text-white py-0 flex flex-col gap-2 items-center justify-center'>
+        <span className='text-[25px] md:text-6xl font-semibold md:font-bold text-center flex-1/4 flex-col md:flex-row 
+          justify-center w-full md:px-10 py-10 md:py-15 text-gray-300'>
             {/* <p className='md:text-6xl md:font-bold'> */}
-              Build experiences like never before
+              Build like never before
               {/* </p> */}
         </span>
 
-        <span className='flex flex-3/4 flex-col md:flex-row w-full h-full p-0 md:p-10 gap-25'>
+        <span className='flex flex-3/4 flex-col md:flex-row w-full h-full p-0 md:p-10 gap-10 md:gap-25'>
 
           {/* LEFT SECTION */}
           <div className='flex md:flex-1/2 h-auto md:h-fit'>
@@ -179,7 +199,7 @@ const Home = () => {
               <p className='flex flex-1/4 text-xl md:text-4xl font-bold pb-8'>
                   Advanced AI Modelled Targetting
               </p>
-              <div className='flex flex-3/4 text-white/70 text-[15px] md:text-[20px] pb-15'>
+              <div className='flex flex-3/4 text-white/70 text-[17px] md:text-[20px] pb-15 text-justify hyphens-auto'>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est eveniet inventore neque repellat, similique commodi fugit nulla corrupti delectus cum minima itaque distinctio illo sed blanditiis aspernatur, aliquam perspiciatis dolores exercitationem ipsam non? Maiores accusantium itaque, esse facere est hic et libero, neque praesentium molestias voluptates. Sapiente voluptatem commodi iure fuga alias numquam unde voluptatum.
               </div>
           </div>
@@ -189,13 +209,13 @@ const Home = () => {
 
       {/* ── CTA — hidden ── */}
       <section className='min-h-[30vh] md:min-h-[50vh] bg-linear-to-b from-gray-800 to-black px-15 sm:px-35 text-white pt-5 flex flex-col gap-5 md:gap-12 items-center justify-center'>
-        <h1 className='text-xl md:text-5xl font-bold md:font-medium
+        <h1 className='text-[21px] md:text-5xl font-bold md:font-medium
           bg-linear-to-r from-blue-500 via-purple-700 to-blue-800 
           bg-clip-text md:mt-20 text-transparent bg-size-[200%] animate-[gradient_3s_ease_infinite]'>
           Ready to Build beyond reality?
         </h1>
         <button className='bg-blue-600 px-5 md:px-8 py-3 md:py-4 mt-0 rounded-lg hover:cursor-pointer text-sm md:font-bold
-          hover:bg-blue-800 transition-all duration-200'>
+          hover:bg-blue-800 transition-all duration-200 text-gray-200'>
           Start your project here
         </button>
       </section>

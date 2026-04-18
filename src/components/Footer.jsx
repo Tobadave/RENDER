@@ -9,26 +9,26 @@ const Footer = () => {
       {/* <section className='flex flex-row'> */}
 
 
-        <div className='flex gap-2 flex-row justify-between md:justify-normal border-b border-gray-800 pb-15 '>
+        <div className='px-4 md:px-0 flex gap-2 flex-row justify-between md:justify-normal border-b border-gray-800 pb-15 '>
 
 
         
-          {/* links */}
-          <div className='flex flex-2/3 gap-10 justify-evenly  md:justify-normal md:gap-20'>
-          {FOOTER.columns.map((col) => (
+        <div className='flex flex-2/3 gap-10 md:gap-20 justify-start flex-wrap'>
 
-            <div key={col.label} className='flex flex-col justify-start md:justify-normal gap-2'>
-              <p className='font-bold text-white text-sm mb-1 w-fit items-start md:text-md'>{col.label}</p>
+          {FOOTER.columns.map((col) => (
+            <div key={col.label} className='flex flex-col items-start gap-2 w-[40%] md:w-auto'>
+              
+              <p className='font-semibold md:font-bold text-blue-500/60 text-[17px] mb-2 md:text-[18px]'>{col.label}</p>
 
               {col.links.map((link) => (
                 <a key={link.label} href={link.href}
-                  className='text-gray-400 text-sm hover:text-white transition duration-200 w-fit'>
+                  className='text-gray-400 text-[14px] hover:text-white transition duration-200'>
                   {link.label}
                 </a>
               ))}
             </div>
           ))}
-          </div>
+        </div>
 
           {/* right side */}
           <div className='hidden md:flex flex-1/3'>
@@ -42,23 +42,34 @@ const Footer = () => {
       </section> */}
 
       {/* Bottom — Copyright + Email */}
-      <div className='flex flex-col md:flex-row justify-between md:h-20 items-start'>
+      <div className='flex flex-col md:flex-row justify-between md:h-auto items-start'>
 
         {/* Email signup */}
-        <div className='w-full md:w-fit flex flex-col md:flex-row md:items-center gap-3'>
-          <p className='text-gray-400 text-sm'>Stay in the loop</p>
-          <input
-            type='email'
-            placeholder='Email'
-            className='bg-gray-900 border border-gray-700 text-white text-sm px-4 py-3 rounded-sm outline-none focus:border-blue-500 transition duration-200'
-          />
-          <button className='bg-blue-600 text-white px-4 py-2 text-sm rounded-sm hover:bg-blue-800 transition duration-200'>
-            →
-          </button>
+        <div className='w-full md:w-fit flex flex-col gap-3'>
+            <p className='flex w-fit text-gray-400 text-sm md:text-lg md:font-semibold'>
+              Subscribe to our Newsletter
+            </p>
+
+            
+            <div className='md:min-w-120 flex flex-row gap-1'>
+
+              <input
+                type='email'
+                placeholder='Enter your e-mail'
+                className='flex-3/4 bg-gray-900 border border-gray-700 text-white text-sm px-4 py-3 rounded-sm outline-none focus:border-blue-500 transition duration-200'
+              />
+              <button className='bg-blue-600 text-gray-200 md:font-semibold hover:cursor-pointer px-4 py-2 text-sm rounded-sm hover:bg-blue-800 transition duration-200'>
+                {/* → */}
+                Subscribe
+              </button>
+            </div>
+
         </div>
 
         {/* Copyright */}
-        <p className='py-2 text-gray-500 text-sm'>{FOOTER.copyright}</p>
+        <div className='justify-center flex md:mx-0 mx-auto'>
+          <p className='py-7 text-gray-500 text-sm'>{FOOTER.copyright}</p>
+        </div>
 
       </div>
 
