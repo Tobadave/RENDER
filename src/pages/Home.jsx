@@ -94,7 +94,8 @@ const Home = () => {
       </section>
 
       {/* ── WHO WE ARE ── */}
-      <section className='min-h-[50vh] bg-linear-to-b from-black to-gray-800 px-10 md:px-35 text-white pb-10'>
+      {/* <section className='min-h-[50vh] bg-linear-to-b from-black to-gray-800 px-10 md:px-35 text-white pb-10'> */}
+      <section className='md:min-h-[50vh] bg-black px-10 md:px-35 text-white pt-4 pb-18'>
 
         <AnimatePresence mode='wait'>
           <motion.p
@@ -135,7 +136,7 @@ const Home = () => {
                 ))}
               </div>
               <div className='px-8 pb-8'>
-                <button className='items-center flex gap-1 md:gap-2 flex-row bg-blue-600 font-semibold 
+                <button className='mt-3 sm:mt-0 items-center flex gap-1 md:gap-2 flex-row bg-blue-600 font-semibold 
                   p-3 px-4 md:px-5 md:mt-5 text-sm hover:cursor-pointer hover:bg-blue-700 rounded-full'>
                     
                   Read More <BsArrowUpRightCircleFill size={20} color='white' />
@@ -178,28 +179,29 @@ const Home = () => {
       </section>
 
       {/* ── EMPTY SECTION ── */}
-      <section className='min-h-[50vh] bg-gray-800 px-10 md:px-35 text-white py-0 flex flex-col gap-2 items-center justify-center'>
-        <span className='text-[25px] md:text-6xl font-semibold md:font-bold text-center flex-1/4 flex-col md:flex-row 
-          justify-center w-full md:px-10 py-10 md:py-15 text-gray-300'>
+      <section className='min-h-[60vh] bg-gray-200 px-10 md:px-35 text-gray-900 py-0 flex flex-col gap-2 items-center justify-center'>
+        <span className='text-[27px] md:text-6xl font-bold text-center flex-1/4 flex-col md:flex-row 
+          justify-center w-full md:px-10 py-10 md:pb-25 md:pt-22 text-blue-600'>
             {/* <p className='md:text-6xl md:font-bold'> */}
               Build like never before
               {/* </p> */}
         </span>
 
-        <span className='flex flex-3/4 flex-col md:flex-row w-full h-full p-0 md:p-10 gap-10 md:gap-25'>
+        <span className='flex flex-3/4 flex-col md:flex-row w-full h-full p-0 md:pb-10 gap-10 md:gap-25'>
 
           {/* LEFT SECTION */}
-          <div className='flex md:flex-1/2 h-auto md:h-fit'>
+          <div className='flex md:flex-1/2 h-auto md:h-fit md:pb-15'>
               <img src={blend} alt="" className='
-              w-full rounded-xl shadow-2xl opacity-80 hover:opacity-100 items-center' />
+              w-full rounded-xl shadow-2xl opacity-100 items-center' />
           </div>
 
           {/* RIGHT SECTION */}
           <div className='flex flex-1/2 flex-col'>
-              <p className='flex flex-1/4 text-xl md:text-4xl font-bold pb-8'>
+              <p className='flex flex-1/4 text-xl md:text-4xl font-bold pb-4 md:pb-8'>
                   Advanced AI Modelled Targetting
               </p>
-              <div className='flex flex-3/4 text-white/70 text-[17px] md:text-[20px] pb-15 text-justify hyphens-auto'>
+
+              <div className='flex flex-3/4 text-gray-900 text-[17px] md:text-[20px] pb-15 text-justify hyphens-auto'>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est eveniet inventore neque repellat, similique commodi fugit nulla corrupti delectus cum minima itaque distinctio illo sed blanditiis aspernatur, aliquam perspiciatis dolores exercitationem ipsam non? Maiores accusantium itaque, esse facere est hic et libero, neque praesentium molestias voluptates. Sapiente voluptatem commodi iure fuga alias numquam unde voluptatum.
               </div>
           </div>
@@ -208,9 +210,10 @@ const Home = () => {
       </section>
 
       {/* ── CTA — hidden ── */}
-      <section className='min-h-[30vh] md:min-h-[50vh] bg-linear-to-b from-gray-800 to-black px-15 sm:px-35 text-white pt-5 flex flex-col gap-5 md:gap-12 items-center justify-center'>
-        <h1 className='text-[21px] md:text-5xl font-bold md:font-medium
-          bg-linear-to-r from-blue-500 via-purple-700 to-blue-800 
+      {/* <section className='min-h-[30vh] md:min-h-[50vh] bg-linear-to-b from-gray-800 to-black px-15 sm:px-35 text-white pt-5 flex flex-col gap-5 md:gap-12 items-center justify-center'> */}
+      <section className='min-h-[30vh] md:min-h-[50vh] bg-black px-10 sm:px-35 text-white pt-5 flex flex-col gap-8 md:gap-12 items-center justify-center'>
+        <h1 className='text-[23px] md:text-6xl font-bold md:font-medium
+          bg-linear-to-r from-blue-500 via-purple-700 to-blue-800 h-auto
           bg-clip-text md:mt-20 text-transparent bg-size-[200%] animate-[gradient_3s_ease_infinite]'>
           Ready to Build beyond reality?
         </h1>
